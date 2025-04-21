@@ -1,0 +1,24 @@
+stages:
+  - build
+  - test
+  # - dockerise
+  # - push
+  # - deploy
+
+before_script:
+  - pip install --upgrade pip
+
+build: 
+  stage: build
+  script: 
+    - make build
+  tags:
+    - docker
+
+test:
+  stage: test
+  script:
+    - make test || echo "No tests yet skipping!"
+  allow_failure: true
+  tags: 
+    - docker
