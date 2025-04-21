@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, Enum
 from sqlalchemy.dialects.mysql import TINYINT
 from sqlalchemy.orm import relationship
-from database import Base
+from app.database import Base
 
 class BusinessUser(Base):
     __tablename__ = "business_user"

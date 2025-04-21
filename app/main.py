@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from database import Base, engine
-from user_account.routes import router as user_router
-from feedback.routes import router as feedback_router
+from app.database import Base, engine
+from app.user_account.routes import router as user_router
+from app.feedback.routes import router as feedback_router
 
 # Create tables
 Base.metadata.create_all(bind=engine)

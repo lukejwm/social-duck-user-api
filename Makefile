@@ -1,9 +1,9 @@
 # Makefile for managing your FastAPI app
 
-APP=feedback_app
+APP=feedback_app_api
 HOST=127.0.0.1
 PORT=8000
-MODULE=main:app  # adjust if your entrypoint is something else
+MODULE=app.main:app
 
 .PHONY: run dev install lint fmt clean
 
@@ -25,3 +25,6 @@ fmt:
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
+
+test:
+	echo "No tests implemented yet"
