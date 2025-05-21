@@ -27,4 +27,4 @@ clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
 
 test:
-	echo "No tests implemented yet"
+	pytest -v
