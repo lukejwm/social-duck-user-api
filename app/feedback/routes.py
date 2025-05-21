@@ -68,5 +68,8 @@ def create_feedback(
     )
     db.add(feedback)
     db.commit()
-
+    
+    if review_type == "Negative":
+        return {"message": "Negative feedback submitted. Business will be alerted.", "feedback_id": feedback.id}
+    
     return {"message": "Feedback submitted successfully"}

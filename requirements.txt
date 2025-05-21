@@ -1,7 +1,6 @@
 fastapi
 uvicorn[standard]
 sqlalchemy
-mysql-connector-python
 pydantic
 email-validator
 python-dotenv
