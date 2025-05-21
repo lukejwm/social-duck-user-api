@@ -18,7 +18,7 @@ def submit_feedback(request: schemas.FeedbackRequest, db: Session = Depends(get_
 UPLOAD_DIR = "uploads/"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-@router.post("/feedback/create")
+@router.post("/create")
 def create_feedback(
     username: str = Form(...),
     business_name: str = Form(...),
