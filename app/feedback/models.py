@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, ForeignKey, Enum
-from sqlalchemy.dialects.mysql import TINYINT
+from sqlalchemy import Column, Integer, String, Text, ForeignKey, Enum, SmallInteger
 from sqlalchemy.orm import relationship
 from app.database import Base
 
@@ -24,5 +23,5 @@ class Feedback(Base):
     title = Column(String(75), nullable=False)
     body = Column(Text, nullable=False)
     photo_filename = Column(String(255), nullable=True)
-    star_rating = Column(TINYINT(unsigned=True), nullable=False)
+    star_rating = Column(SmallInteger, nullable=False)
     review_type = Column(Enum("Positive", "Negative"), nullable=False)
